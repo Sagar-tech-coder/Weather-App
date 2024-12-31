@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" />
+    <!-- adding CDN Link for Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#1e1e1e]">
+    <!-- container section -->
+    <div
+      id="container"
+      class="bg-[#fff] text-[#171717] p-[2rem] w-[40%] my-[4rem] mx-auto rounded-xl 5x-sm:w-full 5x-sm:py-10 5x-sm:px-8 5x-sm:my-0 sm:w-[80%] md:w-[70%] x-md:w-[60%] lg:px-10 x-lg:w-[55%] xl:w-[50%] xl:px-8 2xl:w-[40%] 2xl:px-8"
+    >
+      <!-- input feild search section -->
+      <section class="weather_header flex items-center justify-between 5x-sm:flex-col 5x-sm:gap-3 x-sm:flex-row">
+        <!-- form section -->
+        <form class="weather_search relative flex items-center justify-center">
+          <!-- search icon -->
+          <i
+            class="ri-search-line absolute left-[10px] top-[10px] text-[15px] text-[#fff] 5x-sm:top-[5px] lg:left-[10px] lg:top-[10px]"
+          ></i>
+          <!-- search box -->
+          <input
+            type="text"
+            class="city_name border-none bg-[#464646] text-[#fff] outline-none py-[0.5rem] px-[2.5rem] rounded-md placeholder:text-[#f7f7f7] 5x-sm:w-56 5x-sm:py-[4px] 5x-sm:px-[35px] lg:py-[0.5rem] lg:px-[2.5rem]"
+            placeholder="Enter location..."
+          />
+        </form>
+        <!-- current location button -->
+        <button class="current_location text-white py-[7px] px-[15px] rounded-[10px] bg-sky-400 5x-sm:py-[5px] 5x-sm:px-[12px] lg:py-[7px] lg:px-[15px]">Current Location <i class="ri-map-pin-line"></i></button>
+      </section>
+      <!-- weather main data -->
+      <section
+        class="weather_body flex items-center justify-center flex-col gap-[0] pt-5 pr-0 pb-5 pl-0"
+      >
+      <!-- displaying city name -->
+        <div class="weather_city text-[25px] font-bold 5x-sm:text-[18px] x-sm:text-[22px] sm:text-[22px]">Tata, IN</div>
+        <!-- displaying date & time -->
+        <div class="weather_date_time 5x-sm:text-[10px] 5x-sm:pb-2 x-sm:text-[15px] sm:text-[15px]">date & time</div>
+        <!-- weather data -->
+        <div class="weather_data 5x-sm:flex 5x-sm:items-center 5x-sm:justify-center 5x-sm:flex-col">
+          <p class="weather_forcast text-[#fff] py-[7px] px-[30px] rounded-[20px] bg-[#1e1e1e] 5x-sm:text-[12px] 5x-sm:py-[5px] 5x-sm:px-[15px] 5x-sm:w-fit lg:text-[18px] lg:py-[6px] lg:px-[30px]"></p>
+          <!-- displaying weather icon -->
+          <div class="weather_icon"></div>
+        </div>
+        <!-- displaying weather temperature -->
+        <p class="weather_temperature text-[23px] font-medium 5x-sm:text-[15px] lg:text-[22px]"></p>
+        <!-- displaying weather min degree & max degree -->
+        <div class="weather_minmax flex items-center justify-center gap-[20px] 5x-sm:text-[12px] lg:text-[17px]">
+          <p class="weather_min"></p>
+          <p class="weather_max"></p>
+        </div>
+        <!-- </div> -->
+      </section>
+      <!-- weather extra data(info) -->
+      <section class="weather_info w-full grid grid-cols-2 gap-[20px] 5x-sm:grid-cols-1 2x-sm:grid-cols-2">
+        <!-- card 01 -->
+        <div class="weather_card py-[10px] px-[15px] flex items-center justify-start gap-[15px]">
+          <i class="ri-temp-hot-line text-[25px]"></i>
+          <!-- displaying weather feels -->
+          <div>
+            <p class="card-h text-[13px] font-semibold">Feels Like</p>
+            <p class="card-desc weather_feelsLike text-[13px]">15&#176</p>
+          </div>
+        </div>
+        <!-- card 02 -->
+        <div class="weather_card py-[10px] px-[15px] flex items-center justify-start gap-[15px]">
+          <i class="ri-contrast-drop-line text-[25px]"></i>
+          <!-- displaying weather humidity -->
+          <div>
+            <p class="card-h text-[13px] font-semibold">Humidity</p>
+            <p class="card-desc weather_humidity text-[13px]">15&#176</p>
+          </div>
+        </div>
+        <!-- card 03 -->
+        <div class="weather_card py-[10px] px-[15px] flex items-center justify-start gap-[15px]">
+          <i class="ri-windy-line text-[25px]"></i>
+          <!-- displaying weather wind -->
+          <div>
+            <p class="card-h text-[13px] font-semibold">Wind</p>
+            <p class="card-desc weather_wind text-[13px]">15&#176</p>
+          </div>
+        </div>
+        <!-- card 04 -->
+        <div class="weather_card py-[10px] px-[15px] flex items-center justify-start gap-[15px]">
+          <i class="ri-dashboard-3-fill text-[25px]"></i>
+          <!-- displaying weather pressure -->
+          <div>
+            <p class="card-h text-[13px] font-semibold">Pressure</p>
+            <p class="card-desc weather_pressure text-[13px]">15&#176</p>
+          </div>
+        </div>
+      </section>
+      <!-- weather forcast -->
+      <section class="weather_forecast flex items-center justify-center">
+        <!-- <h2 class="text-center text-[20px] py-[30px] px-0">5-Day Forecast</h2> -->
+        <div class="forecast_container pt-[40px] flex items-center justify-center gap-[20px] 5x-sm:flex-wrap">
+          <!-- <div class="forecast_card">
+            <div class="forecast_card">
+            
+              <p class="forecast_date"></p>
+              <img class="forecast_icon" src="" alt="weather icon" />
+              <p class="forecast_temp"></p>
+              <p class="forecast_desc"></p>
+              </div>
+            </div> -->
+        </div>
+        
+      </section>
+    </div>
+    <!-- Adding JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
